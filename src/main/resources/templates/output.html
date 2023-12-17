@@ -10,7 +10,6 @@
 
     <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
 
-    /* http://localhost:8080/input?previous=入力された値 */
-    <p><a th:href="@{/input(previous=${previous})}">入力画面へ戻る</a></p>
+    <p><a th:href="@{/input(previous=${previous})}" th:text="#{content.retunInputScreen}"></a></p>
 </body>
 </html>
