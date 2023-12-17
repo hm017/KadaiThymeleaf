@@ -10,7 +10,7 @@ public class OutputController {
 
     @PostMapping("/output")
     public String postOutput(@RequestParam("val") String val, Model model) {
-        //modelにいれる
+        //model
         model.addAttribute("val", val); //入力した値
         model.addAttribute("previous", val); //クエリパラメータ(入力値)
         return "output";
