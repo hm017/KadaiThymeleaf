@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title th:text="#{head.title}"></title>
+</head>
+<body>
+    <h1 th:text="#{content.title}"></h1>
+    <h2 th:text="#{content.inputScreen}"></h2>
+
+    /*前回入力した値がある時に、前回の値を表示する*/
+    <p th:unless="${previous} == null" th:text="'前回入力された値は「' + ${previous} + '」です。'">th:unless</p>
+
+    /*フォーム*/
+    <p th:text="#{content.message}"></p>
+        <form method="post" action="/output">
+        <input type="text" name="val">
+        <button type="submit">送信</button>
+    </form>
+
+</body>
+</html>
